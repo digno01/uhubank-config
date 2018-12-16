@@ -1,6 +1,6 @@
 server:
   port: ${PORT:9999}
-  contextPath: /uaa
+  contextPath: /authorize
 
 security:
   user:
