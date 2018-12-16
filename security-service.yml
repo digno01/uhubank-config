@@ -1,0 +1,8 @@
+server:
+  port: ${PORT:9999}
+  contextPath: /authorize
+
+security:
+  user:
+    password: password
+  ignored: /css/**,/js/**,/favicon.ico,/webjars/**
