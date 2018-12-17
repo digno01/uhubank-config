@@ -25,11 +25,11 @@ security:
 
 spring:
     datasource:
-       # data: classpath:/sql/data.sql
         driver-class-name: org.postgresql.Driver
         url: jdbc:postgresql://localhost:5432/uhubank?verifyServerCertificate=false&useSSL=false&requireSSL=false
         username: postgres
-        password: postgres
+        password: 'postgres'
+        platform: postgres
         
     jpa:
       hibernate:
@@ -39,6 +39,7 @@ spring:
       database-platform: org.hibernate.dialect.PostgreSQL9Dialect
       open-in-view: false
       generate-ddl: false
+  
 # Logger configuration
 logging:
   pattern:
