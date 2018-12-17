@@ -33,7 +33,7 @@ spring:
         url: jdbc:postgresql://localhost/oauth?verifyServerCertificate=false&useSSL=false&requireSSL=false
         username: root
     jpa:
-        database-platform: org.postgresql.Driver
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
         generate-ddl: false
         hibernate:
             ddl-auto: none
