@@ -18,7 +18,7 @@ spring:
         driver-class-name: org.postgresql.Driver
         password: 'postgres'
         platform: postgres
-        url: jdbc:mysql://localhost/delivery-order?verifyServerCertificate=false&useSSL=false&requireSSL=false
+        url: jdbc:postgresql:://localhost/delivery-order?verifyServerCertificate=false&useSSL=false&requireSSL=false
         username: postgres
     jpa:
         database-platform: org.hibernate.dialect.PostgreSQLDialect
