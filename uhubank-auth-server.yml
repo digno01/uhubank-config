@@ -25,16 +25,25 @@ security:
 
 spring:
     datasource:
-        data: classpath:/sql/data.sql
+       # data: classpath:/sql/data.sql
         driver-class-name: org.postgresql.Driver
-        password: 'postgres'
-        platform: postgres
-        schema: classpath:/sql/schema.sql
         url: jdbc:postgresql://localhost/oauth?verifyServerCertificate=false&useSSL=false&requireSSL=false
         username: postgres
+        password: postgres
+        
     jpa:
-        database-platform: org.hibernate.dialect.PostgreSQLDialect
-        generate-ddl: false
-        hibernate:
-            ddl-auto: none
-        show-sql: true
+      hibernate:
+        ddl-auto: none
+      show-sql: true
+      database: postgresql
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+      open-in-view: false
+      generate-ddl: false
+# Logger configuration
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    org.springframework: INFO
+    org.hibernate: DEBUG
+# Server configuration
