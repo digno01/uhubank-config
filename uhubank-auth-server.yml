@@ -26,17 +26,17 @@ security:
 spring:
     datasource:
         driver-class-name: org.postgresql.Driver
-        url: jdbc:postgresql://localhost:5432/uhubank?verifyServerCertificate=false&useSSL=false&requireSSL=false
+        url: jdbc:postgresql://localhost/uhubank?verifyServerCertificate=false&useSSL=false&requireSSL=false
         username: postgres
         password: 'postgres'
-        platform: postgres
+        platform: postgresql
         
     jpa:
       hibernate:
         ddl-auto: none
       show-sql: true
-      database: postgresql
-      database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+      database: UHUBANK
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
       open-in-view: false
       generate-ddl: false
   
