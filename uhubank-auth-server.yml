@@ -36,7 +36,7 @@ spring:
         ddl-auto: none
       show-sql: true
       database: postgresql
-      database-platform: org.hibernate.dialect.PostgreSQLDialect
+      database-platform: org.hibernate.dialect.PostgreSQL9Dialect
       open-in-view: false
       generate-ddl: false
 # Logger configuration
