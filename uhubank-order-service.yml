@@ -16,10 +16,11 @@ eureka:
 spring:
     datasource:
         driver-class-name: org.postgresql.Driver
-        password: 'postgres'
-        platform: postgres
-        url: jdbc:postgresql:://localhost/ordens?verifyServerCertificate=false&useSSL=false&requireSSL=false
+        url: jdbc:postgresql://localhost/uhubank?verifyServerCertificate=false&useSSL=false&requireSSL=false
         username: postgres
+        password: 'postgres'
+        platform: postgresql
+        
     jpa:
         database-platform: org.hibernate.dialect.PostgreSQLDialect
         generate-ddl: false
@@ -34,3 +35,13 @@ security:
     resource:
       userInfoUri: ${authserver.hostname}/user
       id: orders
+
+  
+# Logger configuration
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    org.springframework: INFO
+    org.hibernate: DEBUG
+# Server configuration
