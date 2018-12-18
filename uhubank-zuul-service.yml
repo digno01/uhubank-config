@@ -4,7 +4,21 @@ info:
 server:
   port: 9094
 
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  sensitive: false
 
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.boot: INFO
+    #com.netflix.discovery: 'OFF'
+    ROOT: INFO
+    
 eureka:
   instance:
     instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
