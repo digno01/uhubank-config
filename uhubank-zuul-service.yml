@@ -2,7 +2,7 @@ info:
   component: uhubank-zuul-service
 
 server:
-  port: 9093
+  port: 9094
 
 
 eureka:
