@@ -32,14 +32,15 @@ eureka:
     registry-fetch-interval-seconds: 1
 
 zuul:
-  routes:
-    security:
-      path: /**
-      stripPrefix: false
-      serviceId: uhubank-auth-server
-    orders:
-      path: /api/orders/**
-      serviceId: uhubank-order-service
+  sensitive-headers: Cookie,Set-Cookie
+  #routes:
+  #  security:
+  #    path: /**
+  #    stripPrefix: false
+  #    serviceId: uhubank-auth-server
+  #  orders:
+  #    path: /api/orders/**
+  #    serviceId: uhubank-order-service
     
   #add-proxy-headers: true
   #sensitive-headers: Cookie,Set-Cookie
