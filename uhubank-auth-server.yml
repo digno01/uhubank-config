@@ -17,12 +17,12 @@ security:
     oauth2:
         client:
             access-token-validity-seconds: 1800
-            authorized-grant-types: password,refresh_token
+            authorized-grant-types: password,refresh_token,implicit
             client-id: uhubankApp
             client-secret: $2a$10$p9Pk0fQNAQSesI4vuvKA0OZanDD2
             resource-ids: resources
-            scope: read,write
-            #scope: password
+            #scope: read,write
+            scope: password
 
 spring:
     datasource:
