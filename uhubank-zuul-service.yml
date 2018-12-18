@@ -1,31 +1,26 @@
+info:
+  component: uhubank-zuul-service
+
 server:
   port: 9094
 
+
 eureka:
   instance:
-    hostname: localhost
-    port: 9091
+    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+    lease-expiration-duration-in-seconds: 1
+    lease-renewal-interval-in-seconds: 2
   client:
     registerWithEureka: true
-    fetchRegistry: false
+    fetchRegistry: true
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
-  server:
-    wait-time-in-ms-when-sync-empty: 3000
-info:
-  component: Zuul Server
+      defaultZone: http://localhost:9091/eureka/
+    registry-fetch-interval-seconds: 1
 
-endpoints:
-  restart:
-    enabled: true
-  shutdown:
-    enabled: true
-  sensitive: false
+zuul:
+  sensitive-headers: Cookie,Set-Cookie
 
-logging:
-  level:
-    org.springframework.security: DEBUG
-    org.springframework.web: DEBUG
-    org.springframework.boot: INFO
-    #com.netflix.discovery: 'OFF'
-    ROOT: INFO
+
+#logging:
+#  level:
+#    org.springframework: DEBUG
