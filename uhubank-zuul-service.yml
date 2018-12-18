@@ -41,7 +41,7 @@ zuul:
       path: /api/orders/**
       serviceId: uhubank-order-service
     
-  add-proxy-headers: true
+  #add-proxy-headers: true
   #sensitive-headers: Cookie,Set-Cookie
 
 
