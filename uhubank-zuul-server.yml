@@ -28,6 +28,9 @@ zuul:
     orders:
       path: /api/**
       serviceId: uhubank-order-service
+    transactions:
+       path: /api/**
+      serviceId: uhubank-transaction-service
 
 
 #logging:
