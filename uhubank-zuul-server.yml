@@ -26,7 +26,7 @@ zuul:
       stripPrefix: false
       serviceId: uhubank-auth-server
     orders:
-      path: /api/orders/**
+      path: /api/**
       serviceId: uhubank-order-service
 
 
